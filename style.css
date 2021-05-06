@@ -41,10 +41,20 @@ section {
   height: 300px;
   width: 500px;
   border: 2px dashed #c2cdda;
-  border-radius: 15px;
+  border-radius: 18px;
   overflow: hidden;
   margin-bottom: 18px;
   background-color: #FFFCEC;
+}
+
+.drag-area.active {
+  border: 2px solid #c2cdda;
+  opacity: .5;
+}
+
+.drag-area.drop {
+  border: none;
+  opacity: 1;
 }
 
 .fas.fa-file-image {
@@ -69,5 +79,11 @@ button {
   padding: 8px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
