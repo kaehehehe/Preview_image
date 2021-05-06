@@ -57,7 +57,7 @@ section {
   opacity: 1;
 }
 
-.fas.fa-file-image {
+.fas {
   font-size: 70px;
 }
 
@@ -65,7 +65,7 @@ section {
   font-size: 20px;
 }
 
-.fas.fa-file-image,
+.fas,
 .drag-area span {
   margin-bottom: 10px;
 }
