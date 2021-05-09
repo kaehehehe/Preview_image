@@ -1,6 +1,8 @@
 const dragArea = document.querySelector('.drag-area');
 const dragText = document.querySelector('span');
 const icon = document.querySelector('.fas');
+const button = document.querySelector('button');
+const input = document.querySelector('input');
 
 let file;
 
@@ -22,8 +24,20 @@ dragArea.addEventListener('dragleave', () => {
 dragArea.addEventListener('drop', (e) => {
   e.preventDefault();
   file = e.dataTransfer.files[0];
+  showImage();
+});
+
+button.addEventListener('click', () => {
+  input.click();
+});
+
+input.addEventListener('change', function() {
+  file = this.files[0];
+  showImage();
+});
+
+function showImage() {
   const fileType = file.type;
-  
   const validExtensions = ['image/jpeg', 'image/peg', 'image/png'];
   if (validExtensions.includes(fileType)) {
     const fileReader = new FileReader();
@@ -40,4 +54,4 @@ dragArea.addEventListener('drop', (e) => {
     alert('This is not image file!');
     dragArea.classList.remove('active');
   }
-});
+}
