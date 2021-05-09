@@ -43,7 +43,6 @@ function showImage() {
     const fileReader = new FileReader();
       fileReader.onload = () => {
       const fileURL = fileReader.result;
-      console.log(fileURL)
       const imgTag = `<img src="${fileURL}" alt="">`;
       dragArea.innerHTML = imgTag;
       dragArea.classList.remove('active');
